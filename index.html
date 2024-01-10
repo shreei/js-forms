@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electronic Company Feedback Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div ng-app="feedbackApp" ng-controller="FeedbackController" class="feedback-form">
+    <h2>Electronic Company Feedback Form</h2>
+
+    <form ng-submit="submitFeedback()">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" ng-model="feedback.name" required> <br><br>
+
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" ng-model="feedback.email" required> <br><br>
+
+      <label for="Performance rating">Performance rating:</label>
+      <input type="number" id="Performance rating" ng-model="feedback.number" min="1" max="5"> <br><br>
+
+      <label for="Product rating">Product rating:</label>
+      <input type="number" id="Performance rating" ng-model="feedback.number" min="1" max="5"> <br><br>
+      <label for="Customer satisfaction">Customer satisfaction:</label>
+      <input type="number" id="Performance rating" ng-model="feedback.number" min="1" max="5"> <br><br>
+      <label for="Design rating">Design rating:</label>
+      <input type="number" id="Performance rating" ng-model="feedback.number" min="1" max="5">  <br><br>
+
+      <label for="comment">Comments:</label>
+      <textarea id="comment" ng-model="feedback.comment"></textarea> <br><br>
+
+      <button type="submit", ngcontroller="aaa" >Submit Feedback</button>
+      <p ng-show="aaa.FormSubmitted">successfully submitted</p>
+    </form>
+</div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
